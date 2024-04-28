@@ -1,3 +1,3 @@
 <template>
-    <div class="wrap">1</div>
+  <div class="wrap">1</div>
 </template>
