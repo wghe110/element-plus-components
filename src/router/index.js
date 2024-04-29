@@ -10,6 +10,10 @@ export default createRouter({
         {
           path: '/intro',
           component: () => import('../views/introduce/index.vue')
+        },
+        {
+          path: '/upload',
+          component: () => import('../views/demos/upload/index.vue')
         }
       ]
     },
