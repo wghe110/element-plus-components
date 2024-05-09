@@ -9,6 +9,7 @@ import CarColor from './CarColor/index.vue'
 import Emoji from './Emoji/index.vue'
 import Filter from './Filter/index.vue'
 import FilterItem from './Filter/Item.vue'
+import Watermark from './Watermark/index'
 
 const customPlus = {
   install(Vue, options) {
@@ -24,6 +25,7 @@ const customPlus = {
     Vue.component('c-emoji', Emoji);
     Vue.component('c-filter', Filter);
     Vue.component('c-filter-item', FilterItem);
+    Vue.component('c-watermark', Watermark);
   }
 }
 

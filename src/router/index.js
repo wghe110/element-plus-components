@@ -50,6 +50,10 @@ export default createRouter({
         {
           path: '/filter',
           component: () => import('../views/demos/filter.vue')
+        },
+        {
+          path: '/watermark',
+          component: () => import('../views/demos/watermark.vue')
         }
       ]
     },
