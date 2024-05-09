@@ -42,6 +42,10 @@ export default createRouter({
         {
           path: '/car-color',
           component: () => import('../views/demos/car-color.vue')
+        },
+        {
+          path: '/emoji',
+          component: () => import('../views/demos/emoji.vue')
         }
       ]
     },

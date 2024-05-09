@@ -6,6 +6,7 @@ import CustomDateRangePicker from './CustomDateRangePicker/index.vue'
 import Location from './Location/index.vue'
 import ActionBtns from './ActionBtns/index.vue'
 import CarColor from './CarColor/index.vue'
+import Emoji from './Emoji/index.vue'
 
 const customPlus = {
   install(Vue, options) {
@@ -18,6 +19,7 @@ const customPlus = {
     Vue.component('c-location', Location);
     Vue.component('c-action-btns', ActionBtns);
     Vue.component('c-car-color', CarColor);
+    Vue.component('c-emoji', Emoji);
   }
 }
 
