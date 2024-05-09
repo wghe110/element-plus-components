@@ -38,6 +38,10 @@ export default createRouter({
         {
           path: '/action-btns',
           component: () => import('../views/demos/action-btns.vue')
+        },
+        {
+          path: '/car-color',
+          component: () => import('../views/demos/car-color.vue')
         }
       ]
     },

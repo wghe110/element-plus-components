@@ -5,6 +5,7 @@ import DateRangePicker from './DateRangePicker/index.vue'
 import CustomDateRangePicker from './CustomDateRangePicker/index.vue'
 import Location from './Location/index.vue'
 import ActionBtns from './ActionBtns/index.vue'
+import CarColor from './CarColor/index.vue'
 
 const customPlus = {
   install(Vue, options) {
@@ -16,6 +17,7 @@ const customPlus = {
     Vue.component('c-custom-date-range-picker', CustomDateRangePicker);
     Vue.component('c-location', Location);
     Vue.component('c-action-btns', ActionBtns);
+    Vue.component('c-car-color', CarColor);
   }
 }
 
