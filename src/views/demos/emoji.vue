@@ -9,8 +9,27 @@
     <c-emoji type="love"></c-emoji>
     <br><br>
 
+    <div class="demo">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 </template>
 
 <script setup>
 </script>
+
+<style lang="scss" scoped>
+.demo {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+
+  >div {
+    width: 33.33%;
+    height: 20px;
+    background-color: #ccc;
+  }
+}
+</style>

@@ -46,6 +46,10 @@ export default createRouter({
         {
           path: '/emoji',
           component: () => import('../views/demos/emoji.vue')
+        },
+        {
+          path: '/filter',
+          component: () => import('../views/demos/filter.vue')
         }
       ]
     },

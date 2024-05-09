@@ -11,6 +11,7 @@
       <el-menu-item index="/action-btns">按钮组</el-menu-item>
       <el-menu-item index="/car-color">车牌颜色</el-menu-item>
       <el-menu-item index="/emoji">emoji表情</el-menu-item>
+      <el-menu-item index="/filter">查询条件</el-menu-item>
     </el-menu>
   </div>
 </template>

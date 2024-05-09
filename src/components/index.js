@@ -7,6 +7,8 @@ import Location from './Location/index.vue'
 import ActionBtns from './ActionBtns/index.vue'
 import CarColor from './CarColor/index.vue'
 import Emoji from './Emoji/index.vue'
+import Filter from './Filter/index.vue'
+import FilterItem from './Filter/Item.vue'
 
 const customPlus = {
   install(Vue, options) {
@@ -20,6 +22,8 @@ const customPlus = {
     Vue.component('c-action-btns', ActionBtns);
     Vue.component('c-car-color', CarColor);
     Vue.component('c-emoji', Emoji);
+    Vue.component('c-filter', Filter);
+    Vue.component('c-filter-item', FilterItem);
   }
 }
 
