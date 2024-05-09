@@ -8,6 +8,7 @@
       <el-menu-item index="/date-range-picker">日期</el-menu-item>
       <el-menu-item index="/custom-date-range-picker">自定义日期</el-menu-item>
       <el-menu-item index="/location">定位</el-menu-item>
+      <el-menu-item index="/action-btns">按钮组</el-menu-item>
     </el-menu>
   </div>
 </template>

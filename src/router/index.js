@@ -34,6 +34,10 @@ export default createRouter({
         {
           path: '/location',
           component: () => import('../views/demos/location.vue')
+        },
+        {
+          path: '/action-btns',
+          component: () => import('../views/demos/action-btns.vue')
         }
       ]
     },
