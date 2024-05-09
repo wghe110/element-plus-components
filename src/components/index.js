@@ -3,6 +3,7 @@ import AddressSelect from './AddressSelect/index.vue'
 import CarNoInput from './CarNoInput/index.vue'
 import DateRangePicker from './DateRangePicker/index.vue'
 import CustomDateRangePicker from './CustomDateRangePicker/index.vue'
+import Location from './Location/index.vue'
 
 const customPlus = {
   install(Vue, options) {
@@ -12,6 +13,7 @@ const customPlus = {
     Vue.component('c-car-number-input', CarNoInput);
     Vue.component('c-date-range-picker', DateRangePicker);
     Vue.component('c-custom-date-range-picker', CustomDateRangePicker);
+    Vue.component('c-location', Location);
   }
 }
 

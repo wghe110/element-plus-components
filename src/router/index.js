@@ -30,6 +30,10 @@ export default createRouter({
         {
           path: '/custom-date-range-picker',
           component: () => import('../views/demos/custom-date-range-picker.vue')
+        },
+        {
+          path: '/location',
+          component: () => import('../views/demos/location.vue')
         }
       ]
     },
