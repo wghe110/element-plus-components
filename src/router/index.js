@@ -54,6 +54,10 @@ export default createRouter({
         {
           path: '/watermark',
           component: () => import('../views/demos/watermark.vue')
+        },
+        {
+          path: '/table',
+          component: () => import('../views/demos/table.vue')
         }
       ]
     },
