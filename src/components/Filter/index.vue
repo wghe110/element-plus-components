@@ -1,12 +1,12 @@
 <template>
-  <div class="wrap-filter" :style="{ gap: gap + 'px', 'width': `calc(100% + ${gap}px)` }">
+  <div class="wrap-filter" :style="{ gap: gap[1] + 'px' }">
     <slot></slot>
   </div>
 </template>
 
 <script setup>
 import { provide } from 'vue';
-import { symbolGap, symbolLabelWidth } from './symbol';
+import { symbolWidth, symbolLabelWidth, symbolGap } from './symbol';
 
 const props = defineProps({
   labelWidth: {
@@ -14,12 +14,19 @@ const props = defineProps({
     default: ''
   },
   gap: {
-    type: Number,
-    default: 12
+    type: Array,
+    default() {
+      return [36, 16];
+    }
+  },
+  itemWidth: {
+    type: String,
+    default: '160px'
   }
 })
 
 provide(symbolLabelWidth, props.labelWidth)
+provide(symbolWidth, props.itemWidth)
 provide(symbolGap, props.gap)
 </script>
 

@@ -1,5 +1,7 @@
 <template>
-  <div class="wrap-filter-item" :style="{ width: swidth }">
+  <div class="wrap-filter-item" :style="{ width: width || symbolWidthParent, flex: buttonBox ? 1 : 'none' }">
+    <em :style="{ width: symbolGapParent[0] - symbolGapParent[1] + 'px' }"></em>
+    <span class="required" v-if="required">*</span>
     <label :style="{ width: labelWidth || labelWidthParent }" v-if="label">{{ label }}</label>
     <div :style="{ 'justify-content': justify }">
       <slot></slot>
@@ -8,10 +10,10 @@
 </template>
 
 <script setup>
-import { computed, inject } from 'vue';
-import { symbolGap, symbolLabelWidth } from './symbol';
+import { inject } from 'vue';
+import { symbolWidth, symbolLabelWidth, symbolGap } from './symbol';
 
-const props = defineProps({
+defineProps({
   label: {
     type: String,
     default: ''
@@ -20,23 +22,27 @@ const props = defineProps({
     type: String,
     default: ''
   },
-  col: {
-    type: [Number, String],
-    default: 8
-  },
   justify: {
     type: String,
     default: 'flex-start'
+  },
+  width: {
+    type: String,
+    default: ''
+  },
+  buttonBox: {
+    type: Boolean,
+    default: false
+  },
+  required: {
+    type: Boolean,
+    default: false
   }
 })
 
 const labelWidthParent = inject(symbolLabelWidth);
-const gapParent = inject(symbolGap);
-
-const swidth = computed(() => {
-  const per = (props.col / 24 * 100).toFixed(2);
-  return `calc(${per}% - ${gapParent}px)`;
-})
+const symbolWidthParent = inject(symbolWidth);
+const symbolGapParent = inject(symbolGap);
 </script>
 
 <style lang="scss" scoped>
@@ -60,5 +66,11 @@ const swidth = computed(() => {
     min-width: 20px;
     display: flex;
   }
+}
+
+.required {
+  color: red;
+  position: absolute;
+  transform: translate3d(-10px, 0px, 0);
 }
 </style>
