@@ -35,6 +35,7 @@
 import { ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import { drawCanvasFn } from './toBase64';
+import { Refresh, Delete } from '@element-plus/icons-vue'
 
 const props = defineProps({
   modelValue: {

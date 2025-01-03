@@ -2,7 +2,7 @@
   <div class="wrap-emoji">
     <slot name="prefix"></slot>
     <span :class="`emoji ${type}`"></span>
-    <slot></slot>
+    <slot>ddd</slot>
   </div>
 </template>
 
@@ -74,20 +74,16 @@ defineProps({
     content: '( ´◑ ‸◑`) ';
   }
 
-  20% {
+  25% {
     content: '( ´◒ ‸◒`) ';
   }
 
-  40% {
+  50% {
     content: '( ´◐ ‸◐`) ';
   }
 
-  60% {
+  75% {
     content: '( ´◓ ‸◓`) ';
-  }
-
-  80% {
-    content: '( ´◉ ‸◉`) ';
   }
 }
 

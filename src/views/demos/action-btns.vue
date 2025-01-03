@@ -46,7 +46,43 @@ const actions = ref([
     },
   }
 ])
+
 const tableData = [
+  {
+    name: '章三',
+    username: 'zhangsan',
+    mobile: 13938332123
+  },
+  {
+    name: '章三',
+    username: 'zhangsan',
+    mobile: 13938332123
+  },
+  {
+    name: '章三',
+    username: 'zhangsan',
+    mobile: 13938332123
+  },
+  {
+    name: '章三',
+    username: 'zhangsan',
+    mobile: 13938332123
+  },
+  {
+    name: '章三',
+    username: 'zhangsan',
+    mobile: 13938332123
+  },
+  {
+    name: '章三',
+    username: 'zhangsan',
+    mobile: 13938332123
+  },
+  {
+    name: '章三',
+    username: 'zhangsan',
+    mobile: 13938332123
+  },
   {
     name: '章三',
     username: 'zhangsan',
@@ -55,7 +91,7 @@ const tableData = [
 ]
 
 const getActionsFn = (row) => {
-  return [
+  const arr = [
     {
       text: '删除',
       clickFn() {
@@ -81,5 +117,9 @@ const getActionsFn = (row) => {
       },
     }
   ]
+  const num = Math.floor(Math.random() * 4) + 1;
+  const target = arr.slice(0, num)
+
+  return target;
 }
 </script>

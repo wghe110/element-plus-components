@@ -1,16 +1,19 @@
 <template>
   <div class="wrap-action-btns">
     <div v-if="actions.length <= limit">
-      <el-button link type="primary" v-for="item in actions" :key="item.text" @click="item.clickFn">{{ item.text
-        }}</el-button>
+      <template v-for="(item, idx) in actions" :key="item.text">
+        <el-divider direction="vertical" v-if="idx > 0" />
+        <el-link type="primary" @click="item.clickFn">{{ item.text }}</el-link>
+      </template>
     </div>
 
     <div v-else>
-      <el-button link type="primary" v-for="item in showList" :key="item.text" @click="item.clickFn">{{ item.text
-        }}</el-button>
-
+      <template v-for="item in showList" :key="item.text">
+        <el-link type="primary" @click="item.clickFn">{{ item.text }}</el-link>
+        <el-divider direction="vertical" />
+      </template>
       <el-dropdown @command="commandFn">
-        <el-button link type="primary" class="more-btn">更多</el-button>
+        <el-link type="primary" class="more-btn">更多</el-link>
 
         <template #dropdown>
           <el-dropdown-menu>
@@ -50,7 +53,7 @@ export default {
   methods: {
     commandFn(val) {
       const obj = this.hideList.find((item) => item.text === val);
-      obj && obj.clickFn();
+      if (obj) obj.clickFn();
     },
   },
 };
@@ -61,14 +64,11 @@ export default {
   >div {
     display: flex;
     align-items: center;
+    white-space: nowrap;
   }
 }
 
 .opt-drop {
   color: #0084ff;
-}
-
-.more-btn {
-  margin-left: 12px;
 }
 </style>

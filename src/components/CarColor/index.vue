@@ -1,17 +1,24 @@
 <template>
-  <div class="wrap-car-color" :style="{ 'font-size': size }">
-    <img src="./lan.svg" v-if="val === 1" alt="蓝牌"></img>
-    <img src="./bai.svg" v-if="val === 2" alt="白牌"></img>
-    <img src="./hei.svg" v-if="val === 3" alt="黑牌"></img>
-    <img src="./huang.svg" v-if="val === 4" alt="黄牌"></img>
-    <img src="./lv.svg" v-if="val === 5" alt="绿牌"></img>
-    <img src="./huanglv.svg" v-if="val === 6" alt="黄绿"></img>
-    <img src="./qita.svg" v-if="val === -1" alt="其他"></img>
+  <div class="wrap-car-color" :style="{ 'font-size': size }" v-if="picUrl">
+    <img :src="picUrl" :alt="color">
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue';
+import Lan from './images/lan.svg'
+import Bai from './images/bai.svg'
+import Hei from './images/hei.svg'
+import Huang from './images/huang.svg'
+import Lv from './images/lv.svg'
+import HuangLv from './images/huanglv.svg'
+import other from './images/qita.svg'
+import Hong from './images/hong.svg'
+import LinShi from './images/linshi.svg'
+import LanBai from './images/lanbai.svg'
+import JianBianLv from './images/jianbianlv.svg'
+import NongHuang from './images/nonghuang.svg'
+import NongLv from './images/nonglv.svg'
 
 const props = defineProps({
   color: {
@@ -24,16 +31,23 @@ const props = defineProps({
   }
 });
 
-const val = computed(() => {
-  let num = -1;
-  if (props.color.includes('蓝')) num = 1;
-  if (props.color.includes('白')) num = 2;
-  if (props.color.includes('黑')) num = 3;
-  if (props.color.includes('黄')) num = 4;
-  if (props.color.includes('绿')) num = 5;
-  if (props.color.includes('黄绿')) num = 6;
+const picUrl = computed(() => {
+  let val;
+  if (props.color.includes('蓝')) val = Lan;
+  if (props.color.includes('白')) val = Bai;
+  if (props.color.includes('黑')) val = Hei;
+  if (props.color.includes('黄')) val = Huang;
+  if (props.color.includes('绿')) val = Lv;
+  if (props.color.includes('红')) val = Hong;
+  if (props.color.includes('黄绿')) val = HuangLv;
+  if (props.color.includes('农黄')) val = NongHuang;
+  if (props.color.includes('临时')) val = LinShi;
+  if (props.color.includes('蓝白')) val = LanBai;
+  if (props.color.includes('渐变绿')) val = JianBianLv;
+  if (props.color.includes('农绿')) val = NongLv;
+  if (props.color.includes('其他')) val = other;
 
-  return num;
+  return val;
 });
 
 </script>
