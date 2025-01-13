@@ -1,6 +1,5 @@
 {
   "name": "element-plus-pro",
-  "private": true,
   "version": "0.0.1",
   "description": "element-plus components",
   "main": "lib/index.js",
