@@ -1,1 +1,0 @@
-import{e as n,c as r,a,o as s,r as _}from"./index-D6EnRndA.js";const l={class:"wrap-picker"},m={__name:"location",setup(i){n([]);const o=()=>new Promise((e,t)=>{setTimeout(()=>{e("计算机房老司机疯狂撒娇方式付款时间看看精神科飞机上看风景的身份")},2e3)});return(e,t)=>{const c=_("c-location");return s(),r("div",l,[a(c,{lon:123.2323,lat:24.23242,getAddrFn:o})])}}};export{m as default};
