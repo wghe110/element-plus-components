@@ -1,0 +1,30 @@
+{
+  // 开启自动格式化并用eslint格式化
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue"
+  ],
+  // git配置
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  // react的jsx支持
+  "editor.snippetSuggestions": "top"
+}
