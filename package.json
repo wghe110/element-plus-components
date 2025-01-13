@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "description": "element-plus components",
   "main": "lib/index.js",
-  "type": "module",
   "author": "397856638@qq.com",
   "homepage": "https://github.com/wghe110/element-plus-components",
   "repository": "https://github.com/wghe110/element-plus-components",
@@ -16,7 +15,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "gulp",
     "build:doc": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix"
@@ -33,11 +32,13 @@
     "eslint": "^9.2.0",
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.2.0",
-    "sass": "^1.75.0",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.2",
+    "gulp": "^5.0.0",
+    "gulp-clean": "^0.4.0",
     "normalize.css": "^8.0.1",
-    "vite": "^5.2.0"
+    "sass": "^1.75.0",
+    "vite": "^5.2.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
