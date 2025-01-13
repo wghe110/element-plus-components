@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "vite",
     "build": "gulp",
+    "publish": "npm publish",
     "build:doc": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix"
