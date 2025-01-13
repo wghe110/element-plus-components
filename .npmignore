@@ -1,0 +1,7 @@
+.vscode
+dist
+src
+package-lock.json
+vite.config.js
+node_modules
+public

@@ -1,21 +1,30 @@
 {
-  "name": "element-plus-components",
+  "name": "element-plus-pro",
   "private": true,
   "version": "0.0.1",
+  "description": "element-plus components",
+  "main": "lib/index.js",
   "type": "module",
+  "author": "397856638@qq.com",
+  "homepage": "https://github.com/wghe110/element-plus-components",
+  "repository": "https://github.com/wghe110/element-plus-components",
+  "license": "MIT",
+  "keywords": [
+    "element-plus",
+    "vue3",
+    "vue-components"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:doc": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "element-plus": "^2.7.2",
-    "normalize.css": "^8.0.1",
-    "vooks": "^0.2.12",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.2"
+    "vooks": "^0.2.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
@@ -25,6 +34,12 @@
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.2.0",
     "sass": "^1.75.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2",
+    "normalize.css": "^8.0.1",
     "vite": "^5.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
