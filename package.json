@@ -14,9 +14,9 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "gulp",
+    "build": "vite build",
+    "build:lib": "gulp",
     "publish": "npm publish",
-    "build:doc": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix"
   },

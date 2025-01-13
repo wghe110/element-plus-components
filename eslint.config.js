@@ -15,6 +15,8 @@ export default [
         myCustomGlobal: "readonly"
       }
     },
-    rules: {}
+    rules: {
+      "vue/multi-word-component-names": "off"
+    }
   }
 ];
