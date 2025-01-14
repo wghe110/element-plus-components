@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <aside class="menus">
+    <aside class="menus" v-if="showMenu">
       <Menu></Menu>
     </aside>
 
@@ -12,6 +12,13 @@
 
 <script setup>
 import Menu from './Menu/index.vue'
+import { useRoute } from 'vue-router';
+import { ref } from 'vue';
+
+const showMenu = ref(false)
+const route = useRoute();
+const { query: { hideMenu } } = route;
+if (!hideMenu) showMenu.value = true;
 </script>
 
 <style lang="scss" scoped>
